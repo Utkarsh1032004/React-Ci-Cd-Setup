@@ -4,13 +4,14 @@ on:
     push:
         branches:
             - main
-            - master
 
 jobs:
-    runs-on: ubuntu-latest
-    
-    steps:
-        - name: "setup Node js"
-          uses: actions/setup-node@v4
-          with:
-            node-version: '21'
+    buils-and-test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: "Setup Node js"
+              uses: actions/setup-node@v4
+              with:
+                node-version: '21'
+
